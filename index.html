@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:600&display=swap" rel="stylesheet">
+    <title>ZENY GAIN</title>
+</head>
+<body>
+    <div id="main">
+        <h2 id="td">Today Statistics</h2>
+        <div id="disgain">Zeny Gain<br><a id="disgainfunc">0</a></div>
+        <div id="disrate">Zeny Rate<br><a id="disratefunc">0</a></div>
+        <div id="side">
+            <h1>RO M <a style="color:#CD5C5C;">ZENY</a> TRACKING</h1>
+            <div id="status">Hello! (user)</div>
+            <h2 id="start">START</h2>
+            <h2 id="end">END</h2>
+            <form>
+                <input type="text" id="box1">
+                <input type="text" id="box2">
+            </form>
+            <div id="d1">0</div>
+            <div id="d2">0</div>
+            <div id="itemnu"></div>
+            <button id="submit" onclick="submit()">SUBMIT</button>
+        </div>
+    </div>
+    
+    
+</body>
+<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+
+<script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
+
+<!-- Firebase Script -->
+<script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-firestore.js"></script>
+
+<script>
+    // Database code
+    var config = {
+        apiKey: "AIzaSyBL3xGiSHfRqCh2za2eFzyId6TFyUzM1F8",
+        authDomain: "zenytracking.firebaseapp.com",
+        databaseURL: "https://zenytracking.firebaseio.com",
+        storageBucket: "zenytracking.appspot.com"
+    };
+
+    firebase.initializeApp(config);
+    var database = firebase.database();
+</script>
+
+<script src="/index.js"></script>
+
+</html>

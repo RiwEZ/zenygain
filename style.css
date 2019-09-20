@@ -1,0 +1,213 @@
+
+body, html {
+  font-family: 'Titillium Web', sans-serif;
+}
+
+body {
+    background: linear-gradient(45.54deg, #ABEAF4 0%, #BAEEB4 100%); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+#main {
+  margin: 55px 70px;
+  display: block;
+  height: 54em;
+  width: 105em;
+  background-color: #FFF;
+}
+
+#side {
+  height: 54em;
+  width: 431px;
+  background-color: #F2F2F2;
+}
+
+h1 {
+  display: inline-block;
+  font-size: 2.3em;
+  margin-top: 1em;
+  margin-left: 1.05em;
+  margin-right: 1.05em;
+  margin-bottom: 0;
+}
+
+#status {
+  font-size: 1.5em;
+  text-align: center;
+  padding: .2em .2em;
+  margin: 0 4.7em;
+  margin-top: 1.5em;
+  color: white;
+  border-radius: 10px 10px 8px 8px;
+  background-color: #39F;
+}
+
+#start {
+  font-size: 1.3em;
+  display: inline-block;
+  margin-top: 2em;
+  margin-left: 3.8em;
+  margin-bottom: 0;
+}
+
+#end {
+  font-size: 1.3em;
+  float: right;
+  margin-top: 2em;
+  margin-right: 4.2em;
+  margin-bottom: 0;
+}
+
+#box1 {
+  display: inline-block;
+  margin-top: 1em;
+  margin-left: 3em;
+  height: 30px;
+  width: 130px;  
+}
+
+#box2 {
+  float: right;
+  margin-top: 1em;
+  margin-right: 3em;
+  height: 30px;
+  width: 130px;  
+}
+
+#box1, #box2 {
+  margin-bottom: 0;
+}
+
+#itemnu {
+  display: block;
+  height: 318px;
+  width: 286px;
+  background: #C8C8C8;
+  margin: 50px 75px;
+}
+
+#submit {
+  color: white;
+  font-size: 18px;
+  border-radius: 10px 10px 8px 8px;
+  background-color: #228B22;
+  text-align: center;
+  padding: 11px;
+  width: 140px;
+  margin: 0 145px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4.5px #999;
+}
+
+#submit:hover {
+  background-color: #2CC12C;
+}
+
+#submit:active {
+  background-color: #2CC12C;
+  box-shadow: 0 4.5px #666; 
+  transform: translateY(3px);
+}
+
+#td {
+  position: fixed;
+  font-size: 1.9em;
+  margin-top: 2rem;
+  margin-left: 89rem;
+}
+
+#d1, #d2 {
+  display: inline-block;
+  background-color: #E18F8C;
+  margin-top: 1em;
+  border: none;
+  padding: 3px 10px;
+  width: 130px;
+  text-align: right;
+}
+
+#d1 {
+  margin-left: 2.15em;
+}
+
+#d2 {
+  float: right;
+  margin-right: 2.05em;
+}
+
+#disgain {
+  font-size: 24px;
+  margin-top: 7rem;
+  margin-left: 32rem; 
+  position: fixed;
+}
+
+#disgainfunc {
+  font-size: 80px;
+}
+
+#disrate {
+  font-size: 24px;
+  margin-top: 20rem;
+  margin-left: 32rem; 
+  position: fixed;
+}
+
+#disratefunc {
+  font-size: 80px;
+}
+
+#parent{
+ text-align: center;
+}
+
+.loginbox {
+  margin-top: 170px;
+  padding: 40px;
+  display: inline-block;
+  background-color: white;
+  width: 20rem;
+  height: 25rem;
+  border-radius: 15px;
+}
+
+input, button {
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.loginbox input {
+  display: inline-block;
+  outline: none;
+  border: 1px solid #ccc;
+  width: 90%;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 100%;
+  margin-bottom: 25px;
+}
+
+.loginbox button {
+  display: inline-block;
+  outline: none;
+  border: none;
+  width: 90%;
+  height: 45px;
+  font-size: 100%;
+  background-color: #2196F3;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.loginbox button:hover {
+  cursor: pointer;
+  background-color: #1E88E5;
+}
+
+.loginbox h2 {
+  font-size: 35px;
+  font-weight: bolder;
+}
