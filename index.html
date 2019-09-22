@@ -24,7 +24,13 @@
             </form>
             <div id="d1">0</div>
             <div id="d2">0</div>
-            <div id="itemnu"></div>
+            <div id="itemnu">
+                <input type="text" placeholder="Item name" id="itname">
+                <input type="text" placeholder="#" id="amount">
+                <input type="text" placeholder="Price" id="price">
+                <button onclick="additem()">Add</button>
+                <ul id="itemlist"></ul>
+            </div>
             <button id="submit" onclick="submit()">SUBMIT</button>
         </div>
     </div>

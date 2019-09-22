@@ -42,14 +42,40 @@ function submit() {
 }
 
 // Login func
-firebase.auth().onAuthStateChanged(function(user) {
+//firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.
     } else {
       // No user is signed in.
     }
-  });
+  ;
 
 function login() {
     window.open("/index.html", "_self");
+}
+
+
+// Add item func
+
+function additem() {
+    var ITNa = document.getElementById("itname").value;
+    var amount = document.getElementById("amount").value;
+    var price = document.getElementById("price").value;
+    var listNode = document.getElementById("itemlist");
+    var liNode = document.createElement("LI");
+    var txtNode = document.createTextNode(ITNa);
+    var txtNode2 = document.createTextNode(amount + "ea");
+    if (price>0) {
+        var allprice = parseInt(price, 10) * parseInt(amount, 10);
+        var txtNode3 = document.createTextNode((allprice - allprice * 0.1) + "z");
+    };
+    var space = document.createTextNode(" ");
+    var space1 = document.createTextNode(" ");
+
+    liNode.appendChild(txtNode);
+    liNode.appendChild(space);
+    liNode.appendChild(txtNode2);
+    liNode.appendChild(space1);
+    liNode.appendChild(txtNode3);
+    listNode.appendChild(liNode);
 }
