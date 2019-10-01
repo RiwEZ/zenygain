@@ -12,7 +12,7 @@ var mmddyyyy = pad(month + 1) + "-" + pad(date) + "-" + year;
 // Add item func
 
 var gbItemdata = [];
-
+var gbItemgain = [];
 function additem() {
     var ITNa = document.getElementById("itname").value;
     var amount = document.getElementById("amount").value;
@@ -35,17 +35,28 @@ function additem() {
     liNode.appendChild(txtNode3);
     listNode.appendChild(liNode);
 
-    var itemData = txtNode + " " + txtNode2 + " " + txtNode3;
+    var itemData = ITNa.toUpperCase() + " " + amount + "ea" + " " + price + "z";
+
     var Itemgain = allprice - allprice * 0.1;
+
     gbItemdata.push(itemData);
-    console.log(Itemgain);
+    gbItemgain.push(Itemgain);
 };
 
 // Some func to get user input and show them
+
 function submit() {
+    // Item gain from array to int
+    var sum = 0;
+
+    for (var i = 0; i < gbItemgain.length; i++) {
+        sum += gbItemgain[i];
+    }
+
     let b1 = box1.value;
     let b2 = box2.value;
-    var gain = (box2.value - box1.value);
+    var gain = box2.value - box1.value;
+    var gaintotal = gain + sum;
     var gainrate = gain/360
     if (b1 > 0) {
         document.getElementById("d1").style.backgroundColor = "#ACE18C";
@@ -66,10 +77,15 @@ function submit() {
     document.getElementById("disgainfunc").innerHTML = gain;
     document.getElementById("disratefunc").innerHTML = gainrate.toFixed(0);
 
+    var transItemdata = String(gbItemdata.join());
+    console.log(transItemdata);
+
     // Database code
     var firebaseRef = firebase.database().ref();
-    firebaseRef.child('login').child("Zenygain").child(mmddyyyy).set(gain);
-    firebaseRef.child('login').child("Itemgain").child(mmddyyyy).set(gbItemdata);
+    firebaseRef.child('login').child(mmddyyyy).child("Zenygain").set(gain);
+    firebaseRef.child('login').child(mmddyyyy).child("Zenytotal").set(gaintotal);
+    firebaseRef.child('login').child(mmddyyyy).child("Item").child("Itemdata").set(transItemdata);
+    firebaseRef.child('login').child(mmddyyyy).child("Item").child("Itemgain").set(sum);
 }
 
 // Login func
