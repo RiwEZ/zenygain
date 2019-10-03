@@ -9,6 +9,16 @@ var year = currentDate.getFullYear();
     }
 var mmddyyyy = pad(month + 1) + "-" + pad(date) + "-" + year;
 
+// some event listener
+var enter = document.getElementById("box1");
+
+enter.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        box1get();
+    }
+})
+
 // Add item func
 
 var gbItemdata = [];
@@ -44,6 +54,18 @@ function additem() {
 };
 
 // Some func to get user input and show them
+
+function box1get() {
+    let b1 =box1.value;
+    if (b1 > 0) {
+        document.getElementById("d1").style.backgroundColor = "#ACE18C";
+        document.getElementById("d1").innerHTML = b1;
+    }
+    else {
+        document.getElementById("d1").style.backgroundColor = "#E18F8C";
+        document.getElementById("d1").innerHTML = 0;
+    }
+}
 
 function submit() {
     // Item gain from array to int
